@@ -3,11 +3,10 @@ from modules import Game, printm
 
 def main():
     try:
-        try:
-            Game().run()
-        except EOFError:
-            printm("The input stream was cut off.\nClosing game now...", 0.03)
-            exit(1)
+        Game().run()
+    except EOFError:
+        printm("The input stream was cut off.\nClosing game now...", 0.03)
+        exit(1)
     except KeyboardInterrupt:
         print()
         printm("Forcefully ending the game.", 0.05)
